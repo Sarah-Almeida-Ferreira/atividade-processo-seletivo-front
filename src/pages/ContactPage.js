@@ -3,7 +3,20 @@ import React from 'react';
 import ContactCard from '../components/Cards/ContactCards.js';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import '../styles/pages/contact.scss';
+import { formatPhoneNumber } from "../utils/stringFormatter.js";
+import { INSTAGRAM_LINK, PHONE, WHATSAPP_LINK } from "../consts/contacts.js";
+
 const ContactSection = () => {
+    const phone = formatPhoneNumber(PHONE);
+    const phoneLinks = [{
+        href: WHATSAPP_LINK,
+        text: `WhatsApp: ${phone}`
+    }];
+    const instagramLinks = [{
+        href: INSTAGRAM_LINK,
+        text: "@clinicaveterinaria.vidaanimal"
+    }];
+
     return (
         <>
             <h2 className="titulo_contato">Nossos Contatos</h2>
@@ -16,7 +29,8 @@ const ContactSection = () => {
                 <ContactCard
                     title="Contatos"
                     icon={<FaPhoneAlt />}
-                    text="WhatsApp: (11) 9088-8769<br>Telefone: (11) 9088-8769"
+                    text={`Telefone: ${phone}`}
+                    links={phoneLinks}
                 />
 
                 <ContactCard
@@ -27,7 +41,8 @@ const ContactSection = () => {
                 <ContactCard
                     title="Contatos Sociais"
                     icon={<IoMdChatboxes />}
-                    text="@clinicaveterinaria.vidaanimal <br> vidaanimal@gmail.com"
+                    text="vidaanimal@gmail.com"
+                    links={instagramLinks}
                 />
             </div>
         </>
