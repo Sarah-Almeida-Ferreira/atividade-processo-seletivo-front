@@ -15,13 +15,6 @@
     margin: 0 auto;
     justify-items: center; // Centraliza cada card no container
 
-
-    a {
-        // background-color: red;
-        color: $on-primary;
-        text-decoration: none;
-    }
-
     @media (max-width: 868px) {
         grid-template-columns: 1fr; // 1 coluna para telas menores
     }
