@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/pages/about.scss'; // Estilos para a seção sobre
-import SobreImage from '../assets/aboutImage.jpg';
+import SobreImage from '../assets/aboutImage.jpeg';
 const Sobre = () => {
     return (
         <section id="sobre" className="sobre">

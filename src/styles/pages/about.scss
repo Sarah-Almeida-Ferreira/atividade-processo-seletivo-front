@@ -36,34 +36,24 @@
 }
 
 .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     object-fit: cover;
     background-size: cover;
     box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.329);
     border-radius: 10px;
+    overflow: hidden;
+    max-height: 450px;
 
     img {
         width: 100%;
-        max-width: 500px;
-        height: auto;
         border-radius: 10px;
-        object-fit: cover;
     }
 }
+
 
 @media (max-width: 768px) {
     .sobre-container {
         flex-direction: column;
         text-align: center;
         margin-top: -20%;
-    }
-
-    .content,
-    .image {}
-
-    .image img {
-        margin-top: 20px;
     }
 }
