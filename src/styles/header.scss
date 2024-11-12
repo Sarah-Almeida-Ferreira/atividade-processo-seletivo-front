@@ -29,6 +29,7 @@
                 margin: 0 15px;
 
                 a {
+                    position: relative;
                     text-decoration: none;
                     padding: 5px 10px;
                     border-radius: 4px;
@@ -36,8 +37,23 @@
                     font-size: 1.3rem;
                     cursor: pointer;
 
-                    &:hover {
-                        background-color: $secondary-color;
+                    // Define sublinhado no texto quando estiver em hover
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 8px;
+                        bottom: 0;
+                        width: calc(100% - 14px);
+                        height: 2px;
+                        background-color: $primary-color;
+                        transform: scaleX(0);
+                        transform-origin: bottom right;
+                        transition: transform 0.3s ease;
+                    }
+                        
+                    &:hover::after {
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
                     }
                 }
             }
