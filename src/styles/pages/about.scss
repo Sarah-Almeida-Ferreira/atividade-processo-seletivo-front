@@ -1,59 +1,101 @@
 @import "../variables.scss";
 
 .sobre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 60px 20px;
+  width: 80%;
 
-.sobre-container {
-    display: flex;
-    justify-content: space-between;
+  &__container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
+  }
+
+  &__descricao {
+    position: relative;
+    display: grid;
+    column-gap: 25px;
+    grid-template-columns: 50% 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+
+  &__cta {
+    text-align: center;
+    bottom: 0;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid $primary-color;
+    box-sizing: border-box;
+  }
+
+  &__cards-container {
+    margin-top: 5px;
+    display: grid;
+    row-gap: 10px;
+    max-width: 100%;
+  }
+
+  h2 {
+    color: $primary-color;
+  }
 }
 
 .content {
-    flex: 0 0 50%;
-    padding-right: 20px;
+  flex: 0 0 50%;
 
-    h2 {
-        font-size: 28px;
-        font-weight: bold;
-        color: $primary-color; // Cor do título
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 18px;
-        color: #555;
-        line-height: 1.6;
-    }
+  p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+  }
 }
 
 .image {
-    object-fit: cover;
-    background-size: cover;
-    box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.329);
-    border-radius: 10px;
-    overflow: hidden;
-    max-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+  background-size: cover;
+  box-shadow: 2px 8px 10px rgba(0, 0, 0, 0.329);
+  border-radius: 10px;
+  overflow: hidden;
+  height: fit-content;
+  box-sizing: border-box;
 
-    img {
-        width: 100%;
-        border-radius: 10px;
-    }
+  img {
+    width: 100%;
+  }
 }
 
-
 @media (max-width: 768px) {
-    .sobre-container {
-        flex-direction: column;
-        text-align: center;
-        margin-top: -20%;
+  .sobre__container {
+    flex-direction: column;
+    text-align: center;
+    margin-top: -20%;
+
+    .image {
+      display: none;
     }
+  }
+
+  .sobre__cards-container,
+  .sobre__descricao {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .sobre__cta {
+    width: 200%;
+    z-index: 99;
+  }
 }
