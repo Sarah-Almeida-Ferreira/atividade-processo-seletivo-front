@@ -11,10 +11,10 @@ const ServicePage = () => {
             <section className="container">
                 <div className="cards-container">
                     <Card
-                        icon={<FaDog />}
-                        text="Clínica Veterinária"
-                        buttonLink="/clinica-vet"
-                        buttonText="Ver mais"
+                        icon={<FaXRay />}
+                        text="Raio-X"
+                        buttonLink="/raio-x"
+                        buttonText="Ver Mais"
                     />
                     <Card
                         icon={<FaBriefcaseMedical />}
@@ -23,10 +23,10 @@ const ServicePage = () => {
                         buttonText="Ver Mais"
                     />
                     <Card
-                        icon={<FaXRay />}
-                        text="Raio-X"
-                        buttonLink="/raio-x"
-                        buttonText="Ver Mais"
+                        icon={<FaDog />}
+                        text="Clínica Veterinária"
+                        buttonLink="/clinica-vet"
+                        buttonText="Ver mais"
                     />
                 </div>
 
