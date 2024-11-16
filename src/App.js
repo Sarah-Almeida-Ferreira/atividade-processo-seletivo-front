@@ -6,6 +6,7 @@ import Sobre from '../src/pages/AboutPage.js';
 import ContactSection from '../src/pages/ContactPage.js'
 import Footer from '../src/components/Footer.js'
 import './styles/body.scss';
+import BanhoETosa from './pages/BanhoETosaPage.js';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
       </section>
       <section id="servicos" className="section">
         <ServicePage />
+        <br />
+        <br />
+        <BanhoETosa />
         <br />
         <br />
         <ContactSection />
