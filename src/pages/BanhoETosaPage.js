@@ -3,7 +3,7 @@ import "../styles/pages/banhoETosa.scss";
 import Logo from "../assets/logo.png";
 import BanhoETosaImage from "../assets/banhoETosaImage.png";
 import Button from "../components/Buttons/Button";
-import { WHATSAPP_LINK } from "../consts/contacts";
+import { getWhatsappLink } from "../utils/contacts";
 
 const BanhoETosa = () => {
   return (
@@ -24,7 +24,10 @@ const BanhoETosa = () => {
           melhor experiência para o seu amigo de quatro patas.
         </p>
         <div>
-          <Button link={WHATSAPP_LINK} text={"Ir Para o WhatsApp"} />
+          <Button
+            link={getWhatsappLink("banho e tosa")}
+            text={"Ir Para o WhatsApp"}
+          />
         </div>
       </div>
     </div>
