@@ -13,11 +13,11 @@
     border: none;
 
     &:hover {
-        background-color: $secondary-color;
+        background-color: $primary-dark;
         cursor: pointer;
     }
 
     &:active {
-        background-color: darken($secondary-color, 10%);
+        background-color: $primary-darker;
     }
 }

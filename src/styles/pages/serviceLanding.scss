@@ -1,0 +1,45 @@
+@import "../variables.scss";
+
+.service-landing-page {
+  h1 {
+    background-color: $primary-color;
+    color: $on-primary;
+    text-align: center;
+    padding: 2rem;
+    font-size: 25px;
+  }
+  .service-landing-page-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    padding: 2rem;
+    margin: auto;
+    gap: 2rem;
+
+    .service-landing-page-text {
+      padding: 0 2rem;
+      display: grid;
+
+      .button-container {
+        text-align: center;
+      }
+
+      h2,
+      span {
+        color: $primary-color;
+      }
+
+      h2,
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .service-landing-page-content {
+    grid-template-columns: repeat(1, 1fr) !important;
+    text-align: center;
+  }
+}

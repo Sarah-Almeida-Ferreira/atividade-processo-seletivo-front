@@ -58,14 +58,14 @@
         padding: 10px 20px;
         font-size: 0.9rem;
         color: white;
-        background-color: #d4a017; // Cor secundária
+        background-color: $secondary-color; // Cor secundária
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: darken(#d4a017, 10%);
+            background-color: darken($secondary-color, 10%);
         }
     }
 }
